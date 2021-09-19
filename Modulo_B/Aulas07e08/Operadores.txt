@@ -1,0 +1,28 @@
+Aritiméticos:
+	+    Soma
+	-    Subtração
+	*    Multiplicação
+	/    Divisão
+	%    Sobra de uma divisão inteira
+	**   Potência
+
+Relacionais:
+	>    Maior que
+	<    Menor que
+	>=   Maior ou igual
+	<=   Menor ou igual
+	==   Igual (verifica se os valores são iguais, independente dos tipos dos dados)
+	!=   Diferente/desigual (verifica se os valores são diferentes, independente dos tipos dos dados)
+	===  Igual restrito (verifica se os valores e o tipos dos dados são iguais)
+	!==  Diferente/desigual restrito (verifica se os valores e o tipos dos dados são diferentes)
+
+Lógicos:
+	!    Negação
+	&&   And, famoso "e"
+	||   Or, famoso "ou"
+
+Ternários:
+	?   Condição verdadeira
+	:   Condição falsa
+	Exemplo:
+		media >= 7 ? 'Aprovado' : 'Reprovado'

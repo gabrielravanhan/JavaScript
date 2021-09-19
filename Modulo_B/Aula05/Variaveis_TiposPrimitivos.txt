@@ -1,0 +1,28 @@
+Variáveis:
+	
+	1- Podem ser declarasdas como:
+		- var
+		- let
+		- const
+	
+	2 - Podem começar com letras, $ ou _
+
+	3 - Não podem começar com números
+
+	4 - Podem ser compostas por letras e números
+
+	5 - Podem conter acentos e símbolos
+
+	6 - Não podem conter espaços
+
+	7 - Não podem ser palavras reservadas
+
+
+Tipos primitivos:
+	
+	- string
+	- number: Infinity, Nan...
+	- boolean
+	- undefined
+	- object: Array, Null...
+	- function

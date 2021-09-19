@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        // Formatando Strings
+        var nome = window.prompt('Qual é o seu nome?');
+
+        document.write(`Olá, <strong>${nome}</strong>!<br/>`);
+        document.write(`Seu nome tem ${nome.length} letras!<br/>`);
+        document.write(`Seu nome em maiúsculas é <strong>${nome.toUpperCase()}</strong>!<br/>`);
+        document.write(`Seu nome em minúsculas é <strong>${nome.toLowerCase()}</strong>!<br/><br/>`);
+
+        // Formatando números
+        var salario = Number(window.prompt('Qual é o seu salário?'));
+
+        document.write(`Salário sem formatação: ${salario}<br/>`);
+        document.write(`Salário com duas casas decimais: ${salario.toFixed(2)}<br/>`);
+        document.write(`Salário com duas casas decimais, trocando o "." pela ",": ${salario.toFixed(2).replace('.', ',')}<br/>`);
+        document.write(`Salário com formatação monetária: ${salario.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`);
+    </script>
+</body>
+
+</html>
