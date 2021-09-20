@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+
+    <style>
+        body {
+            background-color: rgb(0, 225, 255);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 name="titulo">Iniciando os estudos com DOM</h1>
+    <p class="paragrafo">Aqui vai o resultado</p>
+    <p class="paragrafo">Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="mensagem">Clique aqui</div>
+
+    <script>
+        // Selecionando elementos por tag
+        var paragrafo1 = window.document.getElementsByTagName('p')[0]; // Entre "[]" vai a posição do elemento. Exemplo: o primeiro "p" está na 0, o segundo na 1...
+        document.write('<br/>' + paragrafo1.innerText); // "innerText" trouxe o texto dentro do primeiro parágrafo
+
+        var paragrafo2 = window.document.getElementsByTagName('p')[1];
+        document.write('<br/>' + paragrafo2.innerHTML); // "innerHTML" trouxe o texto formatado pelo "strong", algo que o "innerText" não faria
+
+
+        // Selecionando elementos por id
+        var divMensagem = document.getElementById('mensagem');
+        divMensagem.style.background = 'yellow'; // Mudando a cor de fundo da div para amarelo
+
+
+        // Selecionando elementos por nome
+        var h1Titulo = document.getElementsByName('titulo')[0];
+        h1Titulo.style.background = 'red';
+
+
+        // Selecionando elementos por classe
+        document.getElementsByClassName('paragrafo')[0].style.background = 'green'; // Ecrevendo sem a criação de uma variável
+
+
+        // Selecionando elementos por seletores
+        document.querySelector('div#mensagem').style.color = 'blue'; // Seletor por id
+
+        document.querySelector('p.paragrafo').style.color = 'purple'; // Seletor por classe: primeiro parágrafo 
+        
+        document.querySelector('p+p.paragrafo').style.color = 'orange'; // Seletor por classe: segundo parágrafo, através do "p+p"
+    </script>
+</body>
+
+</html>
