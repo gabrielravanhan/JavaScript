@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 07 - Somando Números</title>
+
+    <style>
+        body {
+            font: normal 18px Arial;
+        }
+
+        input {
+            font: normal 18px Arial;
+            width: 100px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="numero01" id="numero01"> +
+    <input type="number" name="numero02" id="numero02">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="resultado">
+        Resultado
+    </div>
+
+    <script>
+        function somar() {
+            // Variáveis dos números digitados
+            var numero01 = document.getElementById('numero01');
+            var numero02 = document.querySelector('input#numero02');
+
+            // Convertendo os valores recebidos de strings para números
+            var valorNumero01 = Number(numero01.value);
+            var valorNumero02 = Number(numero02.value);
+
+            // Variável da soma
+            var soma = valorNumero01 + valorNumero02;
+
+            // Escrevendo o resultado na div
+            document.getElementById('resultado').innerHTML = `A soma entre ${valorNumero01} e  ${valorNumero02} é igual a ${soma}`;
+        }
+    </script>
+</body>
+
+</html>

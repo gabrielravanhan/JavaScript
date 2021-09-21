@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06 - Eventos DOM</title>
+
+    <style>
+        .centro {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+        }
+
+        div#quadrado {
+            font: normal 20px Arial;
+            background: rgb(0, 52, 100);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        div#circulo {
+            font: normal 20px Arial;
+            background: rgb(0, 52, 100);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="centro">
+        <!-- Adicionando os eventos direto no HTML -->
+        <div id="quadrado" onclick="clicarQuadrado()" onmouseenter="entrarQuadrado()" onmouseout="sairQuadrado()">
+            Interaja...
+        </div>
+
+        <div id="circulo">
+            Interaja...
+        </div>
+    </div>
+
+    <script>
+        // Quadrado
+        var quadrado = document.getElementById('quadrado');
+
+        function clicarQuadrado() {
+            quadrado.innerText = 'Clicou!';
+            quadrado.style.background = 'red';
+        }
+
+        function entrarQuadrado() {
+            quadrado.innerText = 'Entrou!';
+        }
+
+        function sairQuadrado() {
+            quadrado.innerText = 'Saiu!';
+            quadrado.style.background = 'rgb(0, 52, 100)';
+        }
+
+        // Círculo
+        var circulo = document.getElementById('circulo');
+
+        /* Adicionando os eventos no JavaScript */
+        circulo.addEventListener('click', clicarCirculo);
+        circulo.addEventListener('mouseenter', entrarCirculo);
+        circulo.addEventListener('mouseout', sairCirculo);
+
+        function clicarCirculo() {
+            circulo.innerText = 'Clicou!';
+            circulo.style.background = 'red';
+        }
+
+        function entrarCirculo() {
+            circulo.innerText = 'Entrou!';
+        }
+
+        function sairCirculo() {
+            circulo.innerText = 'Saiu!';
+            circulo.style.background = 'rgb(0, 52, 100)';
+        }
+
+    </script>
+</body>
+
+</html>
