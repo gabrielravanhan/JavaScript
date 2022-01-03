@@ -8,7 +8,7 @@ function verificar() {
     var img = document.createElement('img');
     img.setAttribute('id', 'foto');
 
-    if (fAno.value.lenth == 0 || Number(fAno.value) > ano) {
+    if (fAno.value.length == 0 || Number(fAno.value) > ano) {
         window.alert('Erro - Verifique os dados e tente novamente!');
     } else {
         var fsex = document.getElementsByName('radsex');
