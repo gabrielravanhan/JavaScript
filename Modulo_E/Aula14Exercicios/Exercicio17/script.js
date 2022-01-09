@@ -13,7 +13,7 @@ function gerar() {
             let mult = valorNumero * i;
 
             opcao.text = `${valorNumero} X ${i} = ${mult}`;
-            opcao.value = `tab${i}`
+            opcao.value = `tab${i}`;
             tabuada.appendChild(opcao);
         }
     }

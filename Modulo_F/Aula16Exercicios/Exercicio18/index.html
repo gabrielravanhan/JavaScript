@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Números</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Analisador de Números</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>
+                Número (entre 1 e 100): <input type="number" name="numero" id="numero">
+                <input type="button" value="Adicionar" onclick="adicionar()">
+            </p>
+            <p>
+                <select name="lista" id="lista" size="6" style="min-width: 150px">
+
+                </select>
+                <br>
+                <input type="button" value="Finalizar" onclick="finalizar()">
+            </p>
+        </div>
+
+        <div id="resultado">
+
+        </div>
+    </section>
+
+    <footer>
+        <p>🥵 Gabriel</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

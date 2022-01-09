@@ -12,5 +12,5 @@ for (let i = 0; i < valores.length; i++) {
 
 // Forma bonitinha e facilitada 🥵
 for (let i in valores) {
-    console.log(`A posição ${i} tem o velor ${valores[i]};`);
+    console.log(`A posição ${i} tem o valor ${valores[i]};`);
 }
