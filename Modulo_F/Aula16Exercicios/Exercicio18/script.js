@@ -1,69 +1,64 @@
-let valores = [];
+let num = document.getElementById('numero');
+let lista = document.querySelector('select#lista');
 let resultado = document.getElementById('resultado');
+let valores = [];
 
 function adicionar() {
-    let num = document.getElementById('numero');
-    let lista = document.querySelector('select#lista');
     let valorNum = Number(num.value);
 
-    if (num.value.length == 0 || valorNum < 1 || valorNum > 100 || valores.indexOf(valorNum) != -1) {
-        alert('Valor inválido ou já encontrado na lista.')
+    if (numeroInvalido(valorNum) || foraDaLista(valorNum, valores)) {
+        alert('Valor inválido ou já encontrado na lista.');
     } else {
-        num.value = '';
-        resultado.innerHTML = '';
-        let option = document.createElement('option');
-        option.text = `Valor ${valorNum} adicionado.`
-        lista.appendChild(option);
         valores.push(valorNum);
+        let option = document.createElement('option');
+        option.text = `Valor ${valorNum} adicionado.`;
+        lista.appendChild(option);
+        resultado.innerHTML = '';
+    }
+    num.value = '';
+    num.focus();
+}
+
+function numeroInvalido(valorNum) {
+    if (valorNum < 1 || valorNum > 100) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function foraDaLista(valorNum, valores) {
+    if (valores.indexOf(valorNum) != -1) {
+        return true;
+    } else {
+        return false;
     }
 }
 
 function finalizar() {
-    if (document.getElementById('lista').length != 0) {
-        resultado.innerHTML = '';
-        let p = [];
+    if (valores.length != 0) {
+        let total = valores.length;
+        let maior = valores[0];
+        let menor = valores[0];
+        let soma = 0;
+        let media = 0;
 
-        for (let i = 0; i <= 4; i++) {
-            p[i] = document.createElement('p');
-            resultado.appendChild(p[i]);
+        for (let i in valores) {
+            if (valores[i] > maior)
+                maior = valores[i];
+            if (valores[i] < menor)
+                menor = valores[i];
+            soma += valores[i];
         }
+        media = soma / total;
 
-        p[0].innerHTML = aoTodo();
-        p[1].innerHTML = maiorValor();
-        p[2].innerHTML = menorValor();
-        p[3].innerHTML = somaTotal();
-        p[4].innerHTML = media();
+        resultado.innerHTML = '';
+        resultado.innerHTML += `<p>Ao todo, temos ${total} números cadastrados.</p>`;
+        resultado.innerHTML += `<p>O maior valor informado foi ${maior}.</p>`;
+        resultado.innerHTML += `<p>O menor valor informado foi ${menor}.</p>`;
+        resultado.innerHTML += `<p>Somando todos os valores, temos ${soma}.</p>`;
+        resultado.innerHTML += `<p>A média dos valores digitados é ${media}.</p>`;
     } else {
         alert('Adicione valores antes de finalizar.');
     }
-}
-
-function aoTodo() {
-    return `Ao todo, temos ${valores.length} números cadastrados.`;
-}
-
-function maiorValor() {
-    valores.sort();
-    return `O maior valor informado foi ${valores[valores.length - 1]}.`;
-}
-
-function menorValor() {
-    valores.sort();
-    return `O menor valor informado foi ${valores[0]}.`;
-}
-
-function somaTotal() {
-    let soma = 0;
-    for (let i = 0; i < valores.length; i++) {
-        soma += valores[0 + i];
-    }
-    return `Somando todos os valores, temos ${soma}`;
-}
-
-function media() {
-    let soma = 0;
-    for (let i = 0; i < valores.length; i++) {
-        soma += valores[0 + i];
-    }
-    return `A média dos valores digitados é ${soma / valores.length}`;
 }
