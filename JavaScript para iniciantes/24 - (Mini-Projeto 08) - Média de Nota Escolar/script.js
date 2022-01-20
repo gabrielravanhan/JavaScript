@@ -9,8 +9,8 @@ console.log(mediaDoAluno(notas));
 
 function mediaDoAluno(notas) {
     let soma = 0;
-    for (i = 0; i <= notas.length - 1; i++) {
-        soma += notas[i];
+    for (i of notas) {
+        soma += i;
     }
 
     let media = soma / notas.length;
