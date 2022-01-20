@@ -8,12 +8,7 @@ const notas = [70, 70, 80];
 console.log(mediaDoAluno(notas));
 
 function mediaDoAluno(notas) {
-    let soma = 0;
-    for (i of notas) {
-        soma += i;
-    }
-
-    let media = soma / notas.length;
+    let media = calcularSoma(notas);
     if (media >= 90 && media <= 100)
         return 'A';
     else if (media >= 80 && media <= 89)
@@ -24,4 +19,12 @@ function mediaDoAluno(notas) {
         return 'D';
     else
         return 'E';
+}
+
+function calcularSoma(notas) {
+    let soma = 0;
+    for (i of notas) {
+        soma += i;
+    }
+    return soma / notas.length;
 }
