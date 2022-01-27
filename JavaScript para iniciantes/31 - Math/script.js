@@ -12,5 +12,5 @@ console.log(Math.min(1, 2, 15, 10));
 // Calcula potências
 console.log(Math.pow(10, 3));
 
-// Calcula raízes quadrada
+// Calcula raíz quadrada
 console.log(Math.sqrt(9));
