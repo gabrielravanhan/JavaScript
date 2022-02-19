@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festa VIP</title>
+</head>
+
+<body>
+    <h1>Festa VIP</h1>
+    <form>
+        <h2>Bem-vindo à festa senhor(a):</h2>
+        <p><input type="text" name="nome" id="nome" placeholder="Digite seu nome..."></p>
+        <h2>Quem te convidou?</h2>
+        <p>
+            <input type="text" name="convidou" id="convidou" placeholder="Quem te convidou?">
+            <input type="button" value="Verificar se posso entrar" onclick="verificarConvidado()">
+        </p>
+    </form>
+    <div>
+        <h1>Você está permitido a entrar:</h1>
+        <p id="resposta">Pesquisando...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
